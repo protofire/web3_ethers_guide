@@ -1,0 +1,17 @@
+{
+  "name": "web3_ethers_guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "web3": "node scripts/web3_script.js",
+    "ethers": "node scripts/ethers_script.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.7.0",
+    "web3": "^1.7.5"
+  }
+}
