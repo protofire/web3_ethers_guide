@@ -1,24 +1,46 @@
-# Casos de uso usando web3.js y ethers.js
+# Use case using web3.js y ethers.js
 
 ## <https://github.com/henrydpalacios/web3_ethers_guide>
 
-El proposito de estos scripts es mostrar como armar casos comunes de interacción con la blockchain usando web3.js o ethers.js
+The purpose of these scripts is to show how to build common cases of interaction with the blockchain using web3.js or ethers.js
 
-## 📝 Requerimientos
+## 📝 Requirements
 
 - [node](https://nodejs.org/es/)
 - [npm](https://docs.npmjs.com/)
 
-## Ejecución
+## Running
 
-- Correr script usando web3.js
+### web3.js
 
-```bash
-    npm run web3
-```
+1. run read script using **web3.js**
 
-- Correr script usando ethers.js
+    ```bash
+        node scripts/web3_read.js
+    ```
 
-```bash
-    npm run ethers 
-```
+2. run write script using **web3.js**
+
+    > require use a private key and an Infura key on goerli network
+    > set up on `.config.js`
+
+    ```bash
+        node scripts/web3_write.js
+    ```
+
+### ethers.js
+
+1. run read script using **ethers.js**
+
+    ```bash
+        node scripts/ethers_read.js
+    ```
+
+2. run write script using **ethers.js**
+
+    > require use a private key and an Infura key on goerli network
+    > set up on `.config.js`
+
+    ```bash
+        node scripts/ethers_write.js
+    ```

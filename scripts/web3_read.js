@@ -1,8 +1,9 @@
-// Setup
+// Setup provider
 const Web3 = require("web3");
 const rpcURL = "https://cloudflare-eth.com/";
 const web3 = new Web3(rpcURL);
 
+// ABI only via json object
 const ERC20_ABI = require("./ABI.json");
 
 // Get network info
@@ -12,8 +13,9 @@ const getLastBlock = () => {
   });
 };
 
-// Interacting with EOA
+// There is no native support for ENS
 const _getVitalikAddress = async () => web3.eth.ens.getAddress("vitalik.eth");
+
 const vitalikBalance = async () => {
   const addressVitalik = await _getVitalikAddress();
 
@@ -26,6 +28,9 @@ const vitalikBalance = async () => {
     console.log("Vitalik has:", web3.utils.fromWei(wei, "ether"), "ethers");
   });
 };
+
+vitalikBalance();
+// Vitalik has: 1185.222968679011216534 ethers
 
 // Reading constant from SC
 const getDaiTotalSupply = () => {
@@ -46,6 +51,9 @@ const getDaiTotalSupply = () => {
     })
     .catch(console.log);
 };
+
+// getDaiTotalSupply()
+// The DAI total supply will be: 6487310000256098210394586290
 
 getLastBlock();
 vitalikBalance();
