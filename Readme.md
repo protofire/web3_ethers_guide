@@ -1,6 +1,4 @@
-# Use case using web3.js y ethers.js
-
-## <https://github.com/henrypalacios/web3_ethers_guide>
+# Use case using web3.js and ethers.js
 
 The purpose of these scripts is to show how to build common cases of interaction with the blockchain using web3.js or ethers.js
 
